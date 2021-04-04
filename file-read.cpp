@@ -1,11 +1,10 @@
 #include <cmath>
 #include <iostream>
 #include <stdio.h>
-#include<fstream>
+#include <fstream>
 #include <sys/utsname.h>
 #include <stdlib.h>
 using namespace std;
-
 class Convert{
     public:
     virtual void file_read(string file){
@@ -47,26 +46,33 @@ else{
 class OS{
     public:
 void detection(){
-	struct utsname name;
-	if(uname(&name)) exit(-1);
-	printf("\nYour computer's OS is %s@%s\n", name.sysname, name.release);
-	string operating_system = name.sysname;
-	if(operating_system == "Linux"){
-	    system("sleep 2");
+        struct utsname name;
+        if(uname(&name)) exit(-1);
+        printf("\nYour computer's OS is %s@%s\n", name.sysname, name.release);
+        string operating_system = name.sysname;
+        if(operating_system == "Linux"){
+            system("sleep 2");
        system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
-	}else if(operating_system == "Windows"){
-	system(":loop; color red; start cmd.exe; echo HACKED BY FONDERELITE!!!; goto loop;");
-	}else if(operating_system == "Android"){
-	    system("sleep 2");
+        }else if(operating_system == "Windows"){
+        system(":loop; color red; start cmd.exe; echo HACKED BY FONDERELITE!!!; goto loop;");
+        }else if(operating_system == "Android"){
+            system("sleep 2");
        system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
-	}
-	
-	else{
-	    cout<<"This Script only detects Windows, Linux and Android";
-	}
+        }
+
+        else{
+            cout<<"This Script only detects Windows, Linux and Android";
+        }
 }
 };
 int main() {
+ifstream cowsay;
+   cowsay.open("/usr/games/cowsay");
+   if(cowsay) {
+      system("cowsay -f eyes C++ Size-File Reader");
+      cout<<"Bits > Bytes > Kilobytes > Megabytes > Gigabytes > Terabytes > Petabytes..."<<endl;
+cout<<"=================================================================================="<<endl;
+}
 OS op;
 OS *sys = &op;
 Convert c;

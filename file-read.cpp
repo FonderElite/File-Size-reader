@@ -72,7 +72,10 @@ ifstream cowsay;
       system("cowsay -f eyes C++ Size-File Reader");
       cout<<"Bits > Bytes > Kilobytes > Megabytes > Gigabytes > Terabytes > Petabytes..."<<endl;
 cout<<"=================================================================================="<<endl;
-}
+}else{
+     cout<<"Bits > Bytes > Kilobytes > Megabytes > Gigabytes > Terabytes > Petabytes..."<<endl;
+cout<<"=================================================================================="<<endl;  
+   }
 OS op;
 OS *sys = &op;
 Convert c;

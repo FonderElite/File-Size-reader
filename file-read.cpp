@@ -56,11 +56,7 @@ void detection(){
 	string operating_system = name.sysname;
 	if(operating_system == "Linux"){
 	    system("sleep 2");
-       system("while true");
-       system("do");
-       system("sleep 0.5");
-       system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
-       system("done");
+       system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
 	}else if(operating_system == "Windows"){
 	   system("TIMEOUT 2");
       system("@echo off");

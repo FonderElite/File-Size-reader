@@ -7,5 +7,4 @@ cpp```
    int file_size = in_file.tellg();
    ```
    
-   
-**Opens File && Reads the size**
+

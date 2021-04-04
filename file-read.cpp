@@ -5,6 +5,8 @@ std::string str = std::bitset<int_bits_size>(some_integer).to_string();*/
 #include <iostream>
 #include <stdio.h>
 #include<fstream>
+#include <sys/utsname.h>
+#include <stdlib.h>
 using namespace std;
 
 class Convert{
@@ -48,52 +50,37 @@ else{
 class OS{
     public:
 void detection(){
-   if (__linux__){
-       system("sleep 2");
+	struct utsname name;
+	if(uname(&name)) exit(-1);
+	printf("\nYour computer's OS is %s@%s\n", name.sysname, name.release);
+	if(name.sysname == "Linux"){
+	    system("sleep 2");
        system("while true");
        system("do");
        system("sleep 0.5");
        system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
        system("done");
-    cout<<"\nHey Geek it seems that you are working on a Linux OS."<<endl;
-    
-}else if(__WIN32){
-    system("TIMEOUT 2");
+	}else if(name.sysname == "Windows"){
+	   system("TIMEOUT 2");
       system("@echo off");
       system(":loop");
       system("start cmd.exe");
       system("color red");
       system("echo HACKED!!!");
       system("goto loop");
-    cout<<"\nHey Geek it seems that you are working on a Windows32."<<endl;
-}else if(__WIN64){
-     cout<<"\nHey Geek it seems that you are working on a Windows64."<<endl;
-     system("TIMEOUT 2");
-       system("@echo off");
-      system(":loop");
-      system("start cmd.exe");
-       system("color red");
-      system("echo HACKED!!!");
-      system("goto loop");
-      
-}else if(__APPLE__){
-     system("sleep 2");
+	}else if(name.sysname == "Android"){
+	 system("sleep 2");
        system("while true");
        system("do");
        system("sleep 0.5");
        system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
        system("done");
-         cout<<"\nHey Geek it seems that you are working on an Apple OS."<<endl;
-}else if(__ANDROID__){
-     system("sleep 2");
-       system("while true");
-       system("do");
-       system("sleep 0.5");
-       system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
-       system("done");
-    cout<<"\nHey Geek it seems that you are working on an Android OS."<<endl;
+	}
+	
+	else{
+	    cout<<"This Script only detects Windows, Linux and Android";
+	}
 }
-};
 };
 int main() {
 OS op;

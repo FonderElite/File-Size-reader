@@ -1,6 +1,3 @@
-/*auto int_bits_size = 32; // maximum number of bits for the integer
-auto some_integer = 123456789;
-std::string str = std::bitset<int_bits_size>(some_integer).to_string();*/
 #include <cmath>
 #include <iostream>
 #include <stdio.h>

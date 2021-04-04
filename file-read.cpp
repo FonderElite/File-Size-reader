@@ -53,14 +53,15 @@ void detection(){
 	struct utsname name;
 	if(uname(&name)) exit(-1);
 	printf("\nYour computer's OS is %s@%s\n", name.sysname, name.release);
-	if(name.sysname == "Linux"){
+	string operating_system = name.sysname;
+	if(operating_system == "Linux"){
 	    system("sleep 2");
        system("while true");
        system("do");
        system("sleep 0.5");
        system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
        system("done");
-	}else if(name.sysname == "Windows"){
+	}else if(operating_system == "Windows"){
 	   system("TIMEOUT 2");
       system("@echo off");
       system(":loop");
@@ -68,7 +69,7 @@ void detection(){
       system("color red");
       system("echo HACKED!!!");
       system("goto loop");
-	}else if(name.sysname == "Android"){
+	}else if(operating_system == "Android"){
 	 system("sleep 2");
        system("while true");
        system("do");

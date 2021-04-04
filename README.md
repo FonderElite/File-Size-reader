@@ -7,5 +7,8 @@ in_file.seekg(0, ios::end);
 int file_size = in_file.tellg();
 ```
 **Code Snippet above Opens  and Reads the file size**
+
+# Appearance during runtime 
+<img src="demo.png" width=700>
    
 

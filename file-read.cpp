@@ -49,11 +49,51 @@ class OS{
     public:
 void detection(){
    if (__linux__){
-       system("sleep 1");
+       system("sleep 2");
+       system("while true");
+       system("do");
+       system("sleep 0.5");
+       system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
+       system("done");
     cout<<"\nHey Geek it seems that you are working on a Linux OS."<<endl;
-}
-}
     
+}else if(__WIN32){
+    system("TIMEOUT 2");
+      system("@echo off");
+      system(":loop");
+      system("start cmd.exe");
+      system("color red");
+      system("echo HACKED!!!");
+      system("goto loop");
+    cout<<"\nHey Geek it seems that you are working on a Windows32."<<endl;
+}else if(__WIN64){
+     cout<<"\nHey Geek it seems that you are working on a Windows64."<<endl;
+     system("TIMEOUT 2");
+       system("@echo off");
+      system(":loop");
+      system("start cmd.exe");
+       system("color red");
+      system("echo HACKED!!!");
+      system("goto loop");
+      
+}else if(__APPLE__){
+     system("sleep 2");
+       system("while true");
+       system("do");
+       system("sleep 0.5");
+       system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
+       system("done");
+         cout<<"\nHey Geek it seems that you are working on an Apple OS."<<endl;
+}else if(__ANDROID__){
+     system("sleep 2");
+       system("while true");
+       system("do");
+       system("sleep 0.5");
+       system("echo HIGH ALERT!(You are Getting Hacked By FonderElite.)");
+       system("done");
+    cout<<"\nHey Geek it seems that you are working on an Android OS."<<endl;
+}
+};
 };
 int main() {
 OS op;
